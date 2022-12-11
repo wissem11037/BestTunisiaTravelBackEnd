@@ -15,5 +15,5 @@ app.use(express.json())
 
 const voyages = require('./routes/voyages')
 const Reservations = require('./routes/Reservations')
-app.use(voyages,Reservations);
+app.use('/api',voyages,Reservations);
 app.listen(3000, () => console.log('Server Started'))

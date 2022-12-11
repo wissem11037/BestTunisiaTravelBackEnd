@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const ReservationSchema = new mongoose.Schema({
+  
   lastname: {
     type: String,
     required: true
@@ -33,15 +34,13 @@ const ReservationSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+ 
   date: {
     type: Date,
     required: true,
     default: Date.now
   },
-  id: {
-    type: Number,
-    required: true
-  }
+  
 })
 
 module.exports = mongoose.model('Reservations', ReservationSchema)
